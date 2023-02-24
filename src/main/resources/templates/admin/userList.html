@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>User List</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+</head>
+
+<h1>User Details</h1>
+
+<a th:href="@{/admin/register}"></a>
+<table>
+    <thead>
+    <tr>
+        <th>name</th>
+        <th>Email</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <p th:if="${successMsg}" th:text="${successMsg}"></p>
+    <p th:if="${deleteMsg}" th:text="${deleteMsg}"></p>
+    <tr th:each="user:${userList}">
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.email}"></td>
+        <td>
+            <a class="edit" th:href="@{~/user/edit/}+${user.id}">Edit</a> |
+            <a class="delete" th:href="@{~/user/}+${user.id}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>

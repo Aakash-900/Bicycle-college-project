@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{~/css/bootstrap-theme.min.css}">
+    <link rel="stylesheet" th:href="@{~/css/fontAwesome.css}">
+    <link rel="stylesheet" th:href="@{~/css/hero-slider.css}">
+    <link rel="stylesheet" th:href="@{~/css/owl-carousel.css}">
+    <link rel="stylesheet" th:href="@{~/css/templatemo-style.css}">
+
+    <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+    <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link rel="stylesheet" th:href="@{~/css/profile.css}">
+    <link rel="stylesheet" href="/https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<div class="header">
+    <div class="container">
+        <a href="#" class="navbar-brand scroll-top">R-A Cycyle Rental</a>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="navbar-header">
+                <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <!--/.navbar-header-->
+            <div id="main-nav" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a th:href="@{/user/homepage}">Home</a></li>
+                    <li><a th:href="@{/user/menu}">Our Cycles</a></li>
+                    <li><a th:href="@{/user/viewBlog}">Blog Entries</a></li>
+                    <li><a th:href="@{/user/contactNow}">Contact Us</a></li>
+                    <li><a th:href="@{/user/list/}+${userdata.id}">Profile</a></li>
+                    <!--                        <li class="sign"><a th:href="@{/register}">Login</a></li>-->
+                </ul>
+            </div>
+            <!--/.navbar-collapse-->
+        </nav>
+        <!--/.navbar-->
+    </div>
+    <!--/.container-->
+</div>
+<form th:action="@{/save}" th:object="${update}" th:method="post">
+<div class="card">
+    <h1>Profile</h1> <br>
+    <label>Full Name</label>
+  <p th:text="${userdata.name}"></p>
+  <div class="email">
+      <label>Email</label>
+      <p th:text="${userdata.email}"></p> <br>
+      <button type="submit">Logout</button>
+
+</form>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Bikes - Blog page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--        <link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+
+        <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{~/css/bootstrap-theme.min.css}">
+        <link rel="stylesheet" th:href="@{~/css/fontAwesome.css}">
+        <link rel="stylesheet" th:href="@{~/css/hero-slider.css}">
+        <link rel="stylesheet" th:href="@{~/css/owl-carousel.css}">
+        <link rel="stylesheet" th:href="@{~/css/templatemo-style.css}">
+
+        <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="navbar-brand scroll-top">R-A Cycyle Rental</a>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a th:href="@{/user/homepage}">Home</a></li>
+                        <li><a th:href="@{/user/menu}">Our Menus</a></li>
+                        <li><a th:href="@{/user/viewBlog}">Blog Entries</a></li>
+                        <li><a th:href="@{/user/contactNow}">Contact Us</a></li>
+                        <li><a th:href="@{/user/list/}+${users.id}">Profile</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+
+    <section class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Our Blog</h1>
+                    <p>A blog (a truncation of "weblog") is a discussion or informational website published on the World Wide Web consisting of discrete, often informal diary-style text entries (posts). Posts are typically displayed in reverse chronological order so that the most recent post appears first, at the top of the web page.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="blog-item">
+                        <img src="/img/blog3.jpeg" alt="">
+                        <div class="date">26 Oct 2020</div>
+                        <div class="down-content">
+                            <h4>Why we drew 600-mile long picture of a bicycle across Europe</h4>
+                            <span>Daniel Rayneau-Kirkhope and Arianna Casiraghi / Admin</span>
+                            <p>Daniel Rayneau-Kirkhope and Arianna Casiraghi, accompanied by their dog, Zola, have just finished 4,500-mile (7,250km) bike ride across Europe to draw a giant GPS-plotted bicycle across seven countries to raise awareness of how cycling can help tackle the climate emergency. It is believed to be the world largest GPS drawing. You can see photos of their trip on their Instagram account.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="blog-item">
+                        <img src="/img/blog2.jpg" alt="">
+                        <div class="date">21 Oct 2020</div>
+                        <div class="down-content">
+                            <h4>It is a bit of freedom: traffic-stopping tech helps Glasgow school bike bus on its way</h4>
+                            <span>Branding / Admin</span>
+                            <p>With a jingle of bells and a blur of hi-vis jackets, the colourful convoy of children and parents crosses a busy junction on Glasgows southside on their way to primary school.
+                                It is Friday morning, and the weekly Shawlands bike bus is using a new wireless remote control to pause the peak morning traffic at Shawlands Cross for long enough to allow the 50 or so cyclists to navigate the junction together in safety.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="blog-item">
+                        <img src="/img/Blog1.jpg" alt="">
+                        <div class="date">11 Oct 2022</div>
+                        <div class="down-content">
+                            <h4> RideLondon: it is all change as cycling festival on closed roads returns</h4>
+                            <span>Leon / Biker</span>
+                            <p>RideLondon is back. After a Covid-enforced hiatus, the closed-roads cycling festival held its first incarnation since 2019 on Sunday, with both the family-based Freecycle and the 30-, 60- and 100-mile rides held on the same day. There have been some changes – so what was it like? As has become traditional, here are five thoughts about the event.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-md-offset-2">
+                    <div class="blog-item">
+                        <img src="/img/Blog4.jpg" alt="">
+                        <div class="date">03 Oct 2020</div>
+                        <div class="down-content">
+                            <h4>How car culture colonised our thinking and our language</h4>
+                            <span>Bike / Biker</span>
+                            <p>When we block traffic from a street, like for a sports event or a street party, we say that the street is “closed”. But who is it closed for? For motorists. But really, that street is now open to people.
+                                We say this because we have become accustomed to thinking about the street in “traffic logic”. For centuries, streets used to be a place with a multiplicity of purposes: talk, trade, play, work and moving around.
+                                </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="sign-up">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <h2>Signup for our newsletters</h2>
+                    </div>
+                </div>
+            </div>
+            <form id="contact" action="" method="get">
+                <div class="row">
+                    <div class="col-md-4 col-md-offset-3">
+                        <fieldset>
+                            <input name="email" type="text" class="form-control" id="email" placeholder="Enter your email here..." required="">
+                        </fieldset>
+                    </div>
+                    <div class="col-md-2">
+                        <fieldset>
+                            <button type="submit" id="form-submit" class="btn">Send Message</button>
+                        </fieldset>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Copyright &copy; 2020 Victory Template</p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <p>Design: Aakash Chaudhary</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="/js/vendor/bootstrap.min.js"></script>
+
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // navigation click actions 
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');         
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        var offSet = 0;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+    </script>
+</body>
+</html>

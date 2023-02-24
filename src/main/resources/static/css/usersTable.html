@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custmoer Table</title>
+
+
+    <Style>
+        .table{
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            font-weight: bold; 
+        }
+
+    </Style>
+</head>
+
+<body>
+
+    <a class="table" th:href="@{/user/register}">Customer Table</a>
+<table>
+    <thead>
+    <tr>
+        <th>Weeks</th>
+        <th>Hour</th>
+        <th>Full Name</th>
+        <th>Phone</th>
+        <th>List of Bike</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <p th:if="${successMsg}" th:text="${successMsg}"></p>
+    <p th:if="${deleteMsg}" th:text="${deleteMsg}"></p>
+    <tr th:each="user:${userList}">
+        <td th:text="${user.weeks}"></td>
+        <td th:text="${user.hour}"></td>
+        <td th:text="${user.FullName}"></td>
+        <td th:text="${user.Phone}"></td>
+        <td th:text="${user.ListofBike}"></td>
+        <td>
+            <a class="edit" th:href="@{~/user/edit/}+${user.id}">Edit</a> |
+           <a class="delete" th:href="@{~/user/}+${user.id}">Delete</a>
+
+        </td>
+    </tr>
+    </tbody>
+</table>
+    
+</body>
+</html>
+
+

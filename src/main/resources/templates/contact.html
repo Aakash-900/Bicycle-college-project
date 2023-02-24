@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+        <title>Bikes - Contact page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--        <link rel="apple-touch-icon" href="apple-touch-icon.png">-->
+
+        <link rel="stylesheet" th:href="@{~/css/bootstrap.min.css}">
+        <link rel="stylesheet" th:href="@{~/css/bootstrap-theme.min.css}">
+        <link rel="stylesheet" th:href="@{~/css/fontAwesome.css}">
+        <link rel="stylesheet" th:href="@{~/css/hero-slider.css}">
+        <link rel="stylesheet" th:href="@{~/css/owl-carousel.css}">
+        <link rel="stylesheet" th:href="@{~/css/templatemo-style.css}">
+
+        <link href="https://fonts.googleapis.com/css?family=Spectral:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+
+        <script src="/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="navbar-brand scroll-top">R-A Cycyle Rental</a>
+            <nav class="navbar navbar-inverse" role="navigation">
+                <div class="navbar-header">
+                    <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <!--/.navbar-header-->
+                <div id="main-nav" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a th:href="@{/user/homepage}">Home</a></li>
+                        <li><a th:href="@{/user/menu}">Our Menus</a></li>
+                        <li><a th:href="@{/user/viewBlog}">Blog Entries</a></li>
+                        <li><a th:href="@{/user/contactNow}">Contact Us</a></li>
+                        <li><a th:href="@{/user/list/}+${users.id}">Profile</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse-->
+            </nav>
+            <!--/.navbar-->
+        </div>
+        <!--/.container-->
+    </div>
+    <!--/.header-->
+
+
+    <section class="page-heading">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Contact Us</h1>
+                    <p>Whatever drinking vinegar hella fingerstache shoreditch kickstarter kitsch. La croix hella iceland flexitarian letterpress.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="section-heading">
+                        <h2>Message</h2>
+                    </div>
+                    <form id="contact" action="" method="post">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <fieldset>
+                                    <input name="name" type="text" class="form-control" id="name" placeholder="Your name..." required="">
+                                </fieldset>
+                                <fieldset>
+                                    <input name="email" type="text" class="form-control" id="email" placeholder="Your email..." required="">
+                                </fieldset>
+                                <fieldset>
+                                    <input name="phone" type="text" class="form-control" id="phone" placeholder="Your phone..." required="">
+                                </fieldset>
+                            </div>
+                            <div class="col-md-6">
+                                <fieldset>
+                                    <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required=""></textarea>
+                                </fieldset>
+                                <fieldset>
+                                    <button type="submit" id="form-submit" class="btn">Send Message</button>
+                                </fieldset>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="section-heading contact-info">
+                        <h2>Contact Info</h2>
+                        <p> We request your permanent home mailing address in case we need to reach you through regular postal service. However, please note that most communication from IUSB campus and OHRL will come to you via your IUSB email account.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+<!--    <section class="map">-->
+<!--        <div class="container">-->
+<!--            <div class="row">-->
+<!--                <div class="col-md-12">-->
+<!--                    <div id="map">-->
+<!--        &lt;!&ndash; How to change your own map point-->
+<!--            1. Go to Google Maps-->
+<!--            2. Click on your location point-->
+<!--            3. Click "Share" and choose "Embed map" tab-->
+<!--            4. Copy only URL and paste it within the src="" field below-->
+<!--        &ndash;&gt;-->
+<!--&lt;!&ndash;                        <iframe src="/https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.961403412711!2d85.32776909704403!3d27.706132543296683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190a74aa1f23%3A0x74ebef82ad0e5c15!2sSoftwarica%20College!5e0!3m2!1sen!2snp!4v1673015533914!5m2!1sen!2snp" width="1150" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="500" frameborder="0" style="border:0" allowfullscreen></iframe>&ndash;&gt;-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->
+
+
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <p>Bike &copy; 2023 bike of the year</p>
+                </div>
+                <div class="col-md-4">
+                    <ul class="social-icons">
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <p>Design by: Aakash Chaudhary</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="/https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+    <script src="/js/vendor/bootstrap.min.js"></script>
+
+    <script src="/js/plugins.js"></script>
+    <script src="/js/main.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+        // navigation click actions 
+        $('.scroll-link').on('click', function(event){
+            event.preventDefault();
+            var sectionID = $(this).attr("data-id");
+            scrollToID('#' + sectionID, 750);
+        });
+        // scroll to top action
+        $('.scroll-top').on('click', function(event) {
+            event.preventDefault();
+            $('html, body').animate({scrollTop:0}, 'slow');         
+        });
+        // mobile nav toggle
+        $('#nav-toggle').on('click', function (event) {
+            event.preventDefault();
+            $('#main-nav').toggleClass("open");
+        });
+    });
+    // scroll function
+    function scrollToID(id, speed){
+        var offSet = 0;
+        var targetOffset = $(id).offset().top - offSet;
+        var mainNav = $('#main-nav');
+        $('html,body').animate({scrollTop:targetOffset}, speed);
+        if (mainNav.hasClass("open")) {
+            mainNav.css("height", "1px").removeClass("in").addClass("collapse");
+            mainNav.removeClass("open");
+        }
+    }
+    if (typeof console === "undefined") {
+        console = {
+            log: function() { }
+        };
+    }
+    </script>
+</body>
+</html>

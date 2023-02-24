@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Blog</title>
+    <link rel="stylesheet" th:href="@{~/css/adminBlog.css}">
+    <!-- <link rel="stylesheet" href="../static/css/blog.css"> -->
+</head>
+<body>
+<h1>Add Blog </h1>
+<div class="uplaod_blog">
+    <form id="add-post-form" th:method="post" th:action="@{/blog/save}" th:object="${blog}" enctype="multipart/form-data">
+
+<!--        <input class="field" type="text" hidden placeholder="BlogId..."  th:field="*{id}" th:value="${blog.id}" />-->
+
+        <label for="blog_path">Title </label><br>
+        <input type="text" id="blog_path" name="blog_path"  th:field="*{title}" th:value="${blog.title}"><br>
+<!--        <label for="blog_path"> Author </label><br>-->
+<!--        <input type="text" id="blog_path1" name="blog_path"  th:field="*{author}" th:value="${blog.author}"><br>-->
+        <label for="blog_path2"> Content </label><br>
+        <input type="text" id="blog_path2" name="blog_path" th:field="*{content}" th:value="${blog.content}"><br>
+        <label for="blog_path3"> Date </label><br>
+        <input type="Date" id="blog_path3" name="blog_path"  th:field="*{date}" th:value="${blog.date}"><br>
+
+        <p><img id="output" width="200px"  alt=""/></p>
+        <p><input type="file"  name="image" id="file" accept="image/jpeg, image/png, image/jpg" required  th:field="*{image}" onchange="loadFile(event)" style="display: none;"></p>
+        <p><label for="file" style="cursor: pointer;">Upload Image</label></p>
+
+
+        <button type="submit">Submit</button>
+
+
+        <script>
+            var loadFile = function(event) {
+                var image = document.getElementById('output');
+                image.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
+    </form>
+</div>
+
+
+</body>
+</html>

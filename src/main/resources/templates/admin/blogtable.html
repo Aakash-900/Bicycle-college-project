@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,
+                 initial-scale=1, shrink-to-fit=no">
+
+    <link href=
+                  "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+          rel="stylesheet">
+    <style>
+        .btnmain{
+            background-color: white;
+
+        }
+        .editbtn{
+            background-color: skyblue;
+
+        }
+        .deletebtn{
+            background-color: red;
+        }
+    </style>
+</head>
+<body><br/>
+<button class="btnmain"><a th:href="@{~/blog/addBlog}">Add Blog</a></button>
+<div class="container">
+    <table id="mytableID" style="width:100%"
+           class="table table-striped sampleTable">
+
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Author</th>
+            <th>Content</th>
+            <th>Date</th>
+            <th>Image</th>
+            <th>Title</th>
+            <th>Action</th>
+
+
+        </tr>
+        </thead>
+        <tbody>
+        <p th:if="${successMsg}" th:text="${successMsg}"></p>
+        <p th:if="${deleteMsg}" th:text="${deleteMsg}"></p>
+        <tr th:each="blog:${bloglist}">
+            <td th:text="${blog.id}"></td>
+            <td th:text="${blog.author}"></td>
+            <td th:text="${blog.content}"></td>
+            <td th:text="${blog.date}"></td>
+            <td th:text="${blog.title}"></td>
+
+            <td>
+                <img th:src="'data:image/png;base64,'+${blog.imageBase64}" width="100" height="100"/>
+
+            </td>
+
+
+            <td>
+                <button class="editbtn"> <a class="edit" th:href="@{~/blog/editBlog/}+${blog.id}">Edit</a></button>
+                <button class="deletebtn"><a class="delete" th:href="@{~/blog/deleteBlog/}+${blog.id}">Delete</a></button>
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<script>
+    let mypage="Blog";
+    let listgroupItem=Array.from(document.getElementsByClassName("list-group-item"));
+    listgroupItem.forEach(i=>{
+        i.classList.remove("active");
+    })
+    let activeId=document.getElementById(mypage);
+    activeId.classList.add("active");
+
+</script>
+
+<script  src=
+                 "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+</script>
+<script src=
+                "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js">
+</script>
+<script src="fancyTable.js">
+</script>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $(".sampleTable").fancyTable({
+            /* Column number for initial sorting*/
+            sortColumn:0,
+            /* Setting pagination or enabling */
+            pagination: true,
+            /* Rows per page kept for display */
+            perPage:3,
+            globalSearch:true
+        });
+
+    });
+</script>
+</body>
+</html>
